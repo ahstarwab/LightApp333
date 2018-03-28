@@ -27,7 +27,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Muc-GA-Aam">
                                 <rect key="frame" x="141.5" y="561" width="91" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Tell Me"/>
+                                <state key="normal" title="On"/>
                                 <connections>
                                     <action selector="doButtonTap:" destination="BYZ-38-t0r" eventType="touchDown" id="CIU-hF-wxM"/>
                                 </connections>
@@ -45,6 +45,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="messageButton" destination="Muc-GA-Aam" id="EcM-xt-buo"/>
                         <outlet property="messageLabel" destination="uof-qQ-qBA" id="zeB-CK-Xsi"/>
                     </connections>
                 </viewController>
