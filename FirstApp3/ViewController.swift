@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var messageButton: UIButton!
     
     let messageArray  = ["May the force be with you","Live long and prosper","To infinity and beyond","Space is big. You just won't believe how vastly, hugely, mindbogglinly big it is",10] as [Any]
     var index=0
@@ -33,6 +34,21 @@ class ViewController: UIViewController {
         index = index + 1
         index %= self.messageArray.count
     }
+    // Cleaning
+    func updateUI(){
+        if lightOn == true{
+            self.messageLabel.text = "White"
+            self.messageLabel.textColor = UIColor.white
+            view.backgroundColor = UIColor.black
+            self.messageButton.setTitle("Off", for: .normal)
+        } else {
+            self.messageLabel.text = "Black"
+            self.messageLabel.textColor = UIColor.black
+            view.backgroundColor = UIColor.white
+            self.messageButton.setTitle("On", for: .normal)
+        }
+    }
+    
 
 }
 
